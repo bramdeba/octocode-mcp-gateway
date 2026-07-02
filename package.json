@@ -1,0 +1,17 @@
+{
+  "name": "octocode-mcp-gateway",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "OAuth-protected Cloud Run gateway in front of the Octocode MCP server.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@octocodeai/mcp": "^1.0.2",
+    "express": "^4.19.2",
+    "http-proxy-middleware": "^3.0.3",
+    "jose": "^5.9.6",
+    "supergateway": "^3.4.3"
+  }
+}

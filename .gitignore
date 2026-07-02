@@ -1,0 +1,6 @@
+node_modules/
+.deploy.env
+.deploy.*.env
+.env.local
+.env
+/tmp
