@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/bramdeba-octocode-mcp-gateway-badge.png)](https://mseep.ai/app/bramdeba-octocode-mcp-gateway)
+
 # Octocode MCP Gateway
 
 OAuth-protected Cloud Run gateway in front of the [Octocode MCP server](https://www.npmjs.com/package/@octocodeai/mcp) (GitHub code research). Users connect Claude or Gemini by pasting one URL and signing in with their Google Workspace account.
