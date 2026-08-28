@@ -1,4 +1,3 @@
-
 FROM node:22-slim AS builder
 
 WORKDIR /app
@@ -7,10 +6,6 @@ WORKDIR /app
 COPY package.json ./
 RUN npm install --omit=dev
 
-# --- runtime: no npm ships here --------------------------------------------
-# server.js spawns node_modules/.bin binaries directly, so npm/npx are never
-# used at runtime. Removing npm drops its bundled tar (and every future npm
-# transitive CVE) from the shipped image.
 FROM node:22-slim
 
 WORKDIR /app
