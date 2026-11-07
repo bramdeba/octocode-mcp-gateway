@@ -214,7 +214,8 @@ Each target has its own registry, so build once per target:
 
 ```bash
 ./deploy.sh "$TARGET" build
-# equivalent to: gcloud builds submit --tag "$IMAGE" --project "$PROJECT_ID"
+# equivalent to: gcloud builds submit --tag "$IMAGE" --project "$PROJECT_ID" \
+#   --region "$REGION" --default-buckets-behavior=regional-user-owned-bucket
 ```
 
 No local Docker needed — the build runs in Cloud Build. The image bundles the
