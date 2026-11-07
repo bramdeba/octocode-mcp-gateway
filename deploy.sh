@@ -69,7 +69,8 @@ CMD="${2:-help}"
 case "$CMD" in
   build)
     echo "[$TARGET] Building and pushing image..."
-    "${GCLOUD[@]}" builds submit --tag "$IMAGE" --project "$PROJECT_ID"
+    "${GCLOUD[@]}" builds submit --tag "$IMAGE" --project "$PROJECT_ID" \
+      --region "$REGION" --default-buckets-behavior=regional-user-owned-bucket
     ;;
 
   deploy)
