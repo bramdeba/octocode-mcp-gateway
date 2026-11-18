@@ -1,4 +1,4 @@
-FROM node:22-slim AS builder
+FROM node:22.23.5-slim AS builder
 
 WORKDIR /app
 
@@ -6,7 +6,7 @@ WORKDIR /app
 COPY package.json ./
 RUN npm install --omit=dev
 
-FROM node:22-slim
+FROM node:22.23.5-slim
 
 WORKDIR /app
 
